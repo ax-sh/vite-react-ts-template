@@ -22,7 +22,10 @@ pnpm install -D tailwindcss postcss autoprefixer
 npx tailwindcss init --ts
 npx tailwindcss init -p
 ```
-
+```shell
+pnpm install -D vite-plugin-pages
+pnpm install react-router react-router-dom 
+```
 
 ```shell
 todo
