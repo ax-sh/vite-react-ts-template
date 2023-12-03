@@ -1,0 +1,5 @@
+{
+  "printWidth": 120,
+  "importOrderParserPlugins": ["typescript", "jsx"],
+  "importOrderTypeScriptVersion": "5.0.0"
+}
