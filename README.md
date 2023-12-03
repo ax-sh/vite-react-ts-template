@@ -29,6 +29,12 @@ pnpm install react-router react-router-dom
 ```
 
 ```shell
+pnpm add --save-dev --save-exact prettier
+
+
+```
+
+```shell
 todo
 npx degit user/project#main my-project
 ```
