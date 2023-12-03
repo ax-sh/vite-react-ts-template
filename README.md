@@ -13,7 +13,7 @@ pnpx husky add .husky/commit-msg 'pnpx --no -- commitlint --edit "$1"'
 
 ```shell
 pnpm add -D vitest
-npm pkg set scripts.test="vitest"
+npm pkg set scripts.test="vitest run"
 ```
 
 npx degit user/project#main my-project
