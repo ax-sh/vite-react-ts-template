@@ -1,5 +1,14 @@
 {
   "printWidth": 120,
-  "importOrderParserPlugins": ["typescript", "jsx"],
-  "importOrderTypeScriptVersion": "5.0.0"
+  "arrowParens": "avoid",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "jsxSingleQuote": true,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "quoteProps": "as-needed",
+  "semi": false,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "trailingComma": "none",
+  "useTabs": true
 }
