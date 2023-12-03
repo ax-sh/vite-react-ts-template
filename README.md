@@ -16,4 +16,15 @@ pnpm add -D vitest
 npm pkg set scripts.test="vitest run"
 ```
 
+
+```shell
+pnpm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init --ts
+npx tailwindcss init -p
+```
+
+
+```shell
+todo
 npx degit user/project#main my-project
+```
