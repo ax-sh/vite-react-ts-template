@@ -10,7 +10,8 @@
 		"preview": "vite preview",
 		"prepare": "husky install",
 		"test": "vitest run",
-		"test:ui": "vitest --ui"
+		"test:ui": "vitest --ui",
+		"lint:types": "tsc --project tsconfig.json --noEmit"
 	},
 	"dependencies": {
 		"react": "^18.2.0",
