@@ -3,11 +3,12 @@ import {
     useRoutes,
 } from 'react-router-dom'
 import routes from '~react-pages'
+import Loader from "./ui/Loader.tsx";
 
 function App() {
 
   return (
-      <Suspense fallback={<p>Loading...</p>}>
+      <Suspense fallback={<Loader/>}>
           {useRoutes(routes)}
       </Suspense>
   )

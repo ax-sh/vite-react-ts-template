@@ -23,6 +23,7 @@ npx tailwindcss init --ts
 npx tailwindcss init -p
 ```
 ```shell
+# https://github.com/hannoeru/vite-plugin-pages
 pnpm install -D vite-plugin-pages
 pnpm install react-router react-router-dom 
 ```
