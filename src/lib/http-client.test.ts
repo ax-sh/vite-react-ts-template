@@ -21,7 +21,7 @@ describe(httpClient.name, () => {
 		expect(httpClient.get).toBeDefined()
 	})
 	it('should pass post', () => {
-		expect(httpClient.get).toBeDefined()
+		expect(httpClient.post).toBeDefined()
 	})
 
 	it('should get api response', async () => {
