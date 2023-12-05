@@ -19,22 +19,42 @@ describe(User.name, () => {
 		// expect(screen.getByRole('heading')).toBeDefined()
 	})
 
-	it('should load component data', async () => {
-		server.use(
-			http.get('/user', async () => {
-				await delay(3000)
-				return HttpResponse.json({ user: 'Jon Doe' })
-			})
-		)
+	it('should load successful data', async () => {
+		server.use(http.get('/user', async () => HttpResponse.json({ user: 'Jon Doe' })))
 
 		render(<User />, { wrapper: ReactQueryTestWrapper })
-		// const loader = screen.getByTestId('loader')
-		const loader = screen.queryByTestId('loader')
-		// // const loader = screen.queryByTestId('loader')
-		screen.logTestingPlaygroundURL()
-		// await waitForElementToBeRemoved(loader)
-		await waitFor(() => expect(loader).not.toBeInTheDocument())
-		screen.debug()
-		// expect(screen.getByRole('heading')).toHaveTextContent('Jon Doe')
+
+		expect(await screen.findByText(/Jon Doe/)).toBeInTheDocument()
 	})
+
+	// it('should load component data', async () => {
+	// 	server.use(
+	// 		http.get('/user', async () => {
+	// 			await delay()
+	// 			return HttpResponse.json(
+	// 				{ user: 'Jon Doe' }
+	// 				// { status: 500 }
+	// 			)
+	// 		})
+	// 	)
+	//
+	// 	render(<User />, { wrapper: ReactQueryTestWrapper })
+	// 	// userEvent.click(screen.getByTestId('show-child'))
+	// 	// await waitFor(() => screen.findByTestId('loader'), { timeout: 1000 })
+	// 	// const loader = screen.getByTestId('loader')
+	// 	// const loader = await screen.findByTestId('loader')
+	//
+	// 	// const loader = screen.findByTestId('loader')
+	//
+	// 	// await waitFor(async () => {
+	// 	// 	const loader = await screen.findByTestId('loader')
+	// 	// 	// const loader = await screen.findByRole('heading')
+	// 	// 	return expect(loader).not.toBeInTheDocument()
+	// 	// 	// return loader
+	// 	// })
+	// 	expect(await screen.findByText(/Jon Doe/)).toBeInTheDocument()
+	// 	screen.debug()
+	//
+	// 	// expect(screen.getByRole('heading')).toHaveTextContent('Jon Doe')
+	// })
 })
