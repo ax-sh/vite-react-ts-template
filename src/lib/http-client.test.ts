@@ -38,7 +38,7 @@ describe(httpClient.name, () => {
 			const err: AxiosError = e
 			const response = err.response
 			const data = response?.data
-			console.log(data)
+
 			expect(data).toEqual({ message: 'fail' })
 		}
 	})
