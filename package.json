@@ -10,7 +10,7 @@
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
 		"prepare": "husky install",
-		"format": "prettier . --write",
+		"format": "prettier \\\"src/**/*.{js,jsx,ts,tsx,css,scss}\\\" --write",
 		"test": "vitest run",
 		"test:watch": "vitest",
 		"test:ci": "vitest run --coverage",
