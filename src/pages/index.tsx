@@ -1,3 +1,7 @@
 export default function IndexPage() {
-	return <main>Hello</main>
+	return (
+		<main>
+			<section className={'bg-green-300 h-screen'}>Hello</section>
+		</main>
+	)
 }
