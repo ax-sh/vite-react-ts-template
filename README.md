@@ -1,6 +1,5 @@
 [![App CI](https://github.com/ax-sh/vite-react-ts-template/actions/workflows/ci.yml/badge.svg)](https://github.com/ax-sh/vite-react-ts-template/actions/workflows/ci.yml)
 
-
 ```shell
 pnpm create vite
 ```

@@ -15,5 +15,6 @@
 
 	"importOrder": ["react", "^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]", "react-icons"],
 	"importOrderSeparation": true,
-	"importOrderSortSpecifiers": true
+	"importOrderSortSpecifiers": true,
+	"endOfLine": "lf"
 }

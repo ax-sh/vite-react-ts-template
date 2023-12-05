@@ -1,3 +1,3 @@
 export default function Loader() {
-	return <h1>Loading</h1>
+	return <div aria-label='loader' data-testid='loader' aria-live='polite' aria-busy='true'></div>
 }

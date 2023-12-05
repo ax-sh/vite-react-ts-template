@@ -32,14 +32,13 @@ describe(httpClient.name, () => {
 	it('should fail api response', async () => {
 		server.use(http.get('/test', () => HttpResponse.json({ message: 'fail' }, { status: 500 })))
 		try {
-			const response = await httpClient.get('/test')
-			console.log(response)
+			await httpClient.get('/test')
 		} catch (e) {
 			if (!isAxiosError(e)) return
 			const err: AxiosError = e
 			const response = err.response
 			const data = response?.data
-			console.log(data)
+
 			expect(data).toEqual({ message: 'fail' })
 		}
 	})
