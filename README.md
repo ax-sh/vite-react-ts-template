@@ -14,7 +14,7 @@ pnpx husky add .husky/commit-msg 'pnpx --no -- commitlint --edit "$1"'
 pnpm add -D vitest
 npm pkg set scripts.test="vitest run"
 pnpm install --save-dev @testing-library/jest-dom
-
+pnpm install --save-dev @testing-library/react
 ```
 
 ```shell
