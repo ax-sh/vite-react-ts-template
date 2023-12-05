@@ -36,6 +36,11 @@ pnpm add --save-dev --save-exact prettier
 ```
 
 ```shell
+pnpm add @tanstack/react-query
+pnpm add -D @tanstack/eslint-plugin-query
+pnpm add @tanstack/react-query-devtools
+```
+```shell
 todo
 npx degit user/project#main my-project
 ```

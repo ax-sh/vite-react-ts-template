@@ -16,6 +16,8 @@
 		"lint:types": "tsc --project tsconfig.json --noEmit"
 	},
 	"dependencies": {
+		"@tanstack/react-query": "^5.12.2",
+		"@tanstack/react-query-devtools": "^5.12.2",
 		"axios": "^1.6.2",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
@@ -25,6 +27,7 @@
 	"devDependencies": {
 		"@commitlint/cli": "^18.4.3",
 		"@commitlint/config-conventional": "^18.4.3",
+		"@tanstack/eslint-plugin-query": "^5.12.1",
 		"@testing-library/jest-dom": "^6.1.5",
 		"@testing-library/react": "^14.1.2",
 		"@types/react": "^18.2.42",
