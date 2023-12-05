@@ -2,8 +2,9 @@ import { HttpResponse, delay, http } from 'msw'
 import { setupServer } from 'msw/node'
 import { expect } from 'vitest'
 
-import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react'
+import { render, screen, waitForElementToBeRemoved } from '@testing-library/react'
 
+import { API_ROUTES } from '../constants'
 import Loader from './Loader.tsx'
 import { ReactQueryTestWrapper } from './query-wrapper.tsx'
 import User from './user.tsx'
@@ -17,8 +18,6 @@ describe('Loading Indicator', () => {
 		expect(loadingElement).toHaveAttribute('aria-live', 'polite')
 		expect(loadingElement).toHaveAttribute('aria-busy', 'true')
 	})
-
-	// Add more tests as needed, for example, simulating dynamic updates
 })
 
 describe(User.name, () => {
@@ -26,13 +25,12 @@ describe(User.name, () => {
 	afterEach(() => server.resetHandlers())
 	afterAll(() => server.close())
 	it('should load component', () => {
-		server.use(http.get('/user', () => HttpResponse.json()))
+		server.use(http.get(API_ROUTES.USER, () => HttpResponse.json()))
 		render(<User />, { wrapper: ReactQueryTestWrapper })
-		// expect(screen.getByRole('heading')).toBeDefined()
 	})
 
 	it('should load successful data', async () => {
-		server.use(http.get('/user', async () => HttpResponse.json({ user: 'Jon Doe' })))
+		server.use(http.get(API_ROUTES.USER, async () => HttpResponse.json({ user: 'Jon Doe' })))
 
 		render(<User />, { wrapper: ReactQueryTestWrapper })
 
@@ -40,7 +38,7 @@ describe(User.name, () => {
 	})
 
 	it('should load loading state', async () => {
-		server.use(http.get('/user', async () => await delay('infinite')))
+		server.use(http.get(API_ROUTES.USER, async () => await delay('infinite')))
 
 		render(<User />, { wrapper: ReactQueryTestWrapper })
 		expect(screen.getByTestId('loader')).toBeInTheDocument()
@@ -48,7 +46,7 @@ describe(User.name, () => {
 
 	it('should load success state', async () => {
 		server.use(
-			http.get('/user', async () => {
+			http.get(API_ROUTES.USER, async () => {
 				await delay()
 				return HttpResponse.json({ user: 'Jon Doe' })
 			})
@@ -61,7 +59,7 @@ describe(User.name, () => {
 
 	it('should load error state', async () => {
 		server.use(
-			http.get('/user', async () => {
+			http.get(API_ROUTES.USER, async () => {
 				await delay()
 				return HttpResponse.json({ user: 'Jon Doe' }, { status: 500 })
 			})
