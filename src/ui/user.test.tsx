@@ -4,9 +4,9 @@ import { expect } from 'vitest'
 
 import { render, screen, waitForElementToBeRemoved } from '@testing-library/react'
 
+import { ReactQueryTestWrapper } from '../configs/query-wrapper.tsx'
 import { API_ROUTES } from '../constants'
 import Loader from './Loader.tsx'
-import { ReactQueryTestWrapper } from './query-wrapper.tsx'
 import User from './user.tsx'
 
 const server = setupServer()
