@@ -11,6 +11,6 @@ export default function User() {
 	})
 	// console.log(rest, isLoading, '<<<<<')
 	if (isLoading) return <Loader />
-	if (isError) return <strong>Error</strong>
+	if (isError) return <strong role='alert'>Error</strong>
 	return <h1>{data.user}</h1>
 }

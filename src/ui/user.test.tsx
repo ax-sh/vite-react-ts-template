@@ -4,10 +4,22 @@ import { expect } from 'vitest'
 
 import { render, screen, waitFor, waitForElementToBeRemoved } from '@testing-library/react'
 
+import Loader from './Loader.tsx'
 import { ReactQueryTestWrapper } from './query-wrapper.tsx'
 import User from './user.tsx'
 
 const server = setupServer()
+
+describe('Loading Indicator', () => {
+	test('it has the correct aria attributes', () => {
+		render(<Loader />)
+		const loadingElement = screen.getByLabelText(/loader/i)
+		expect(loadingElement).toHaveAttribute('aria-live', 'polite')
+		expect(loadingElement).toHaveAttribute('aria-busy', 'true')
+	})
+
+	// Add more tests as needed, for example, simulating dynamic updates
+})
 
 describe(User.name, () => {
 	beforeAll(() => server.listen())
@@ -45,6 +57,19 @@ describe(User.name, () => {
 		render(<User />, { wrapper: ReactQueryTestWrapper })
 		await waitForElementToBeRemoved(await screen.findByTestId('loader'))
 		expect(await screen.findByText(/Jon Doe/)).toBeInTheDocument()
+	})
+
+	it('should load error state', async () => {
+		server.use(
+			http.get('/user', async () => {
+				await delay()
+				return HttpResponse.json({ user: 'Jon Doe' }, { status: 500 })
+			})
+		)
+
+		render(<User />, { wrapper: ReactQueryTestWrapper })
+		await waitForElementToBeRemoved(await screen.findByTestId('loader'))
+		expect(screen.getByRole('alert')).toBeInTheDocument()
 	})
 
 	// it('should load component data', async () => {
