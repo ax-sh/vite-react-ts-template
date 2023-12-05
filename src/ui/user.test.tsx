@@ -34,13 +34,18 @@ describe(User.name, () => {
 		expect(screen.getByTestId('loader')).toBeInTheDocument()
 	})
 
-	// it('should load loading state', async () => {
-	// 	server.use(http.get('/user', async () => await delay('infinite')))
-	//
-	// 	render(<User />, { wrapper: ReactQueryTestWrapper })
-	// 	await waitForElementToBeRemoved(await screen.findByTestId('loader'))
-	// 	screen.debug()
-	// })
+	it('should load success state', async () => {
+		server.use(
+			http.get('/user', async () => {
+				await delay()
+				return HttpResponse.json({ user: 'Jon Doe' })
+			})
+		)
+
+		render(<User />, { wrapper: ReactQueryTestWrapper })
+		await waitForElementToBeRemoved(await screen.findByTestId('loader'))
+		expect(await screen.findByText(/Jon Doe/)).toBeInTheDocument()
+	})
 
 	// it('should load component data', async () => {
 	// 	server.use(
