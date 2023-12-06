@@ -1,3 +1,5 @@
+import { fireEvent, userEvent, within } from '@storybook/testing-library'
+
 import { Meta, StoryObj } from '@storybook/react'
 
 import withAPIRequest from '../configs/with-api-request.tsx'
@@ -38,4 +40,10 @@ Error.parameters = {
 	msw: {
 		handlers: [http.get(API_ROUTE, () => HttpResponse.error())]
 	}
+	// play: async ({ canvasElement }) => {
+	// 	const canvas = within(canvasElement)
+	//
+	// 	// See https://storybook.js.org/docs/essentials/actions#automatically-matching-args to learn how to setup logging in the Actions panel
+	// 	await userEvent.click(canvas.getByRole('button'))
+	// }
 }
