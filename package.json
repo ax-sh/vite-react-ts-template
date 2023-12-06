@@ -16,6 +16,7 @@
     "test:watch": "vitest",
     "test:ci": "vitest run --coverage",
     "test:ui": "vitest --ui",
+    "test:storybook": "test-storybook",
     "lint:types": "tsc --project tsconfig.json --noEmit",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
@@ -42,6 +43,7 @@
     "@storybook/react": "7.6.3",
     "@storybook/react-vite": "7.6.3",
     "@storybook/test": "7.6.3",
+    "@storybook/test-runner": "^0.16.0",
     "@tanstack/eslint-plugin-query": "^5.12.1",
     "@testing-library/jest-dom": "^6.1.5",
     "@testing-library/react": "^14.1.2",
