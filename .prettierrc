@@ -20,10 +20,12 @@
 		"^@ui/(.*)$",
 		"^[./]",
 		"^react-icons",
-		"^@testing-library/jest-dom/vitest",
+
 		"^@tanstack/react-query",
 		"^msw",
-		"\/mocks"
+		"\/mocks",
+		"^@testing-library/react",
+		"^@testing-library/jest-dom/vitest"
 	],
 	"importOrderSeparation": true,
 	"importOrderSortSpecifiers": true,

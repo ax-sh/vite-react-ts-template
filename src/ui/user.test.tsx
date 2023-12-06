@@ -1,5 +1,3 @@
-import { expect } from 'vitest'
-
 import { render, screen, waitForElementToBeRemoved } from '@testing-library/react'
 
 import { ReactQueryTestWrapper } from '../configs/query-wrapper.tsx'
