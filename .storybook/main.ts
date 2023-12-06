@@ -8,6 +8,7 @@ const config: StorybookConfig = {
 		'@storybook/addon-onboarding',
 		'@storybook/addon-interactions',
 		'@storybook/addon-themes',
+		'@storybook/addon-outline',
 		'@storybook/addon-interactions' // 👈 Register the addon
 	],
 	framework: {
