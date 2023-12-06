@@ -1,45 +1,41 @@
-import { HttpResponse, delay, http } from 'msw'
-import { D as DefaultBodyType } from 'msw/lib/core/RequestHandler-50ddea0c'
-import { PathParams } from 'msw/lib/core/utils/matching/matchRequestUrl'
+import { DefaultBodyType, HttpResponse, PathParams, delay, http } from 'msw'
 
 import { Meta, StoryObj } from '@storybook/react'
 
-// import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import withAPIRequest from '../configs/with-api-request.tsx'
 import { Post, posts } from '../mocks'
 import HttpApp from './index.tsx'
 
 const meta = {
-	title: 'features/http states',
-	component: HttpApp,
-	decorators: [withAPIRequest]
+	title: 'Features/Http States',
+
+	// decorators: [withAPIRequest],
 	//👇 Enables auto-generated documentation for the component story
-	// tags: ['autodocs'] //Note has problems with react query
+	// tags: ['autodocs'], //Note has problems with react query,
+	component: HttpApp
 } satisfies Meta<typeof HttpApp>
+
+const API_ROUTE = 'https://jsonplaceholder.typicode.com/posts'
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Loading: Story = {}
+export const Loading: Story = { decorators: [withAPIRequest] }
 Loading.parameters = {
 	msw: {
-		handlers: [http.get('https://jsonplaceholder.typicode.com/posts', () => delay('infinite'))]
+		handlers: [http.get(API_ROUTE, () => delay('infinite'))]
 	}
 }
-export const Data: Story = {}
+export const Data: Story = { decorators: [withAPIRequest] }
 Data.parameters = {
 	msw: {
-		handlers: [
-			http.get<PathParams, DefaultBodyType, Post[]>('https://jsonplaceholder.typicode.com/posts', () =>
-				HttpResponse.json(posts)
-			)
-		]
+		handlers: [http.get<PathParams, DefaultBodyType, Post[]>(API_ROUTE, () => HttpResponse.json(posts))]
 	}
 }
 
-export const Error: Story = {}
+export const Error: Story = { decorators: [withAPIRequest] }
 Error.parameters = {
 	msw: {
-		handlers: [http.get('https://jsonplaceholder.typicode.com/posts', () => HttpResponse.error())]
+		handlers: [http.get(API_ROUTE, () => HttpResponse.error())]
 	}
 }
