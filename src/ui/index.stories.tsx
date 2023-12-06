@@ -1,10 +1,10 @@
-import { DefaultBodyType, HttpResponse, PathParams, delay, http } from 'msw'
-
 import { Meta, StoryObj } from '@storybook/react'
 
 import withAPIRequest from '../configs/with-api-request.tsx'
 import { Post, posts } from '../mocks'
 import HttpApp from './index.tsx'
+
+import { DefaultBodyType, HttpResponse, PathParams, delay, http } from 'msw'
 
 const meta = {
 	title: 'Features/Http States',

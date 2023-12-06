@@ -22,7 +22,8 @@
 		"^react-icons",
 		"^@testing-library/jest-dom/vitest",
 		"^@tanstack/react-query",
-		"^msw"
+		"^msw",
+		"\/mocks"
 	],
 	"importOrderSeparation": true,
 	"importOrderSortSpecifiers": true,

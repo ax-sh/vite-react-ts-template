@@ -1,9 +1,10 @@
 import { AxiosError, isAxiosError } from 'axios'
-import { HttpResponse, http } from 'msw'
-import { setupServer } from 'msw/node'
 import { expect } from 'vitest'
 
 import { httpClient } from './http-client.ts'
+
+import { HttpResponse, http } from 'msw'
+import { setupServer } from 'msw/node'
 
 const server = setupServer(http.get('/test', () => HttpResponse.json({ message: 'success' })))
 
