@@ -11,15 +11,9 @@ const meta = {
 	title: 'features/http states',
 	component: HttpApp,
 	decorators: [withAPIRequest]
+	//👇 Enables auto-generated documentation for the component story
+	// tags: ['autodocs'] //Note has problems with react query
 } satisfies Meta<typeof HttpApp>
-
-// const defaultQueryClient = new QueryClient()
-
-// export const DefaultBehavior = () => (
-// 	<QueryClientProvider client={defaultQueryClient}>
-// 		<HttpApp />
-// 	</QueryClientProvider>
-// )
 
 export default meta
 type Story = StoryObj<typeof meta>
