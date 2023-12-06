@@ -33,6 +33,7 @@
     "react-router-dom": "^6.20.1"
   },
   "devDependencies": {
+    "@storybook/addon-outline": "^7.6.3",
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
     "@storybook/addon-essentials": "7.6.3",
