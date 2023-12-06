@@ -1,11 +1,13 @@
 // replace with the name of your tailwind css file
 import { withThemeByClassName } from '@storybook/addon-themes'
+import { initialize, mswLoader } from 'msw-storybook-addon'
 
 import type { Preview } from '@storybook/react'
 
 import '../src/global.css'
 
-/* snipped for brevity */
+// Initialize MSW
+initialize()
 
 export const decorators = [
 	withThemeByClassName({
@@ -26,7 +28,9 @@ const preview: Preview = {
 				date: /Date$/i
 			}
 		}
-	}
+	},
+	// Provide the MSW addon loader globally
+	loaders: [mswLoader]
 }
 
 export default preview
