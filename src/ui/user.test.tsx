@@ -1,13 +1,12 @@
-import { HttpResponse, delay, http } from 'msw'
-import { setupServer } from 'msw/node'
-import { expect } from 'vitest'
-
 import { render, screen, waitForElementToBeRemoved } from '@testing-library/react'
 
 import { ReactQueryTestWrapper } from '../configs/query-wrapper.tsx'
 import { API_ROUTES } from '../constants'
 import Loader from './Loader.tsx'
 import User from './user.tsx'
+
+import { HttpResponse, delay, http } from 'msw'
+import { setupServer } from 'msw/node'
 
 const server = setupServer()
 

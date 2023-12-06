@@ -7,7 +7,7 @@ PROTECTED_BRANCHES="^(master|develop)"
 # shellcheck disable=SC2039
 if [[ "$BRANCH" =~ $PROTECTED_BRANCHES ]]
 then
-  echo -e "\n🚫 Cannot commit on $BRANCH branch, please create your own branch" && exit 1
+  echo -e "\n🚫 [pre-commit] Cannot commit on $BRANCH branch, please create your own branch" && exit 1
 fi
 
 pnpm test
