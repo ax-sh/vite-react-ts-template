@@ -1,5 +1,3 @@
-import { fireEvent, userEvent, within } from '@storybook/testing-library'
-
 import { Meta, StoryObj } from '@storybook/react'
 
 import withAPIRequest from '../configs/with-api-request.tsx'
