@@ -1,4 +1,6 @@
 import { HttpResponse, delay, http } from 'msw'
+import { D as DefaultBodyType } from 'msw/lib/core/RequestHandler-50ddea0c'
+import { PathParams } from 'msw/lib/core/utils/matching/matchRequestUrl'
 
 import { Meta, StoryObj } from '@storybook/react'
 
@@ -27,7 +29,11 @@ Loading.parameters = {
 export const Data: Story = {}
 Data.parameters = {
 	msw: {
-		handlers: [http.get<any, any, Post[]>('https://jsonplaceholder.typicode.com/posts', () => HttpResponse.json(posts))]
+		handlers: [
+			http.get<PathParams, DefaultBodyType, Post[]>('https://jsonplaceholder.typicode.com/posts', () =>
+				HttpResponse.json(posts)
+			)
+		]
 	}
 }
 
