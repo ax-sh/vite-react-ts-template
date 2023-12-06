@@ -10,6 +10,7 @@
 		"lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
 		"preview": "vite preview",
 		"prepare": "husky install",
+		"preinstall": "npx only-allow pnpm",
 		"format": "prettier \\\"src/**/*.{js,jsx,ts,tsx,css,scss}\\\" --write",
 		"test": "vitest run",
 		"test:watch": "vitest",
