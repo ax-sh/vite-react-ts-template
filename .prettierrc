@@ -13,7 +13,17 @@
 	"useTabs": true,
 	"plugins": ["@trivago/prettier-plugin-sort-imports"],
 
-	"importOrder": ["react", "^@core/(.*)$", "^@server/(.*)$", "^@ui/(.*)$", "^[./]", "react-icons", "@testing-library/jest-dom/vitest"],
+	"importOrder": [
+		"react",
+		"^@core/(.*)$",
+		"^@server/(.*)$",
+		"^@ui/(.*)$",
+		"^[./]",
+		"react-icons",
+		"@testing-library/jest-dom/vitest",
+		"@tanstack/react-query",
+		"msw"
+	],
 	"importOrderSeparation": true,
 	"importOrderSortSpecifiers": true,
 	"endOfLine": "lf"
