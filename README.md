@@ -33,6 +33,7 @@ pnpm install react-router react-router-dom
 
 ```shell
 pnpm add --save-dev --save-exact prettier
+pnpm install eslint-config-prettier eslint-plugin-prettier prettier --save-dev
 
 
 ```
