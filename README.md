@@ -1,5 +1,5 @@
 [![App CI](https://github.com/ax-sh/vite-react-ts-template/actions/workflows/ci.yml/badge.svg)](https://github.com/ax-sh/vite-react-ts-template/actions/workflows/ci.yml)
-
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
 ```shell
 pnpm create vite
 ```
@@ -34,7 +34,7 @@ pnpm install react-router react-router-dom
 ```shell
 pnpm add --save-dev --save-exact prettier
 pnpm install eslint-config-prettier eslint-plugin-prettier prettier --save-dev
-
+pnpm i -D unplugin-turbo-console
 
 ```
 
@@ -51,5 +51,5 @@ pnpx msw init public
 
 ```shell
 todo
-npx degit user/project#main my-project
+npx degit ax-sh/project#main my-project
 ```

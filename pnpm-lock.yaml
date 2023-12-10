@@ -175,9 +175,18 @@ devDependencies:
   vite-plugin-pwa:
     specifier: ^0.17.3
     version: 0.17.3(vite@5.0.5)
+  vite-plugin-qrcode:
+    specifier: ^0.2.3
+    version: 0.2.3(vite@5.0.5)
   vite-plugin-radar:
     specifier: ^0.9.2
     version: 0.9.2(vite@5.0.5)
+  vite-plugin-remove-console:
+    specifier: ^2.2.0
+    version: 2.2.0
+  vite-plugin-tips:
+    specifier: ^2.1.2
+    version: 2.1.2(vite@5.0.5)
   vitest:
     specifier: ^1.0.1
     version: 1.0.1(@types/node@20.10.3)(@vitest/ui@1.0.1)(happy-dom@12.10.3)
@@ -10429,6 +10438,11 @@ packages:
     resolution: {integrity: sha512-LA0Y9kxMYv47GIPJy6MI84fqTd2HmYZI83W/kM/SkKfDlajnZYfmXFTxkbY+xSBPkLJxltMa9hIkmdc29eguMA==}
     dev: true
 
+  /qrcode-terminal@0.12.0:
+    resolution: {integrity: sha512-EXtzRZmC+YGmGlDFbXKxQiMZNwCLEO6BANKXG4iCtSIM0yqc/pappSx3RIKr4r0uh5JsBckOXeKrB3Iz7mdQpQ==}
+    hasBin: true
+    dev: true
+
   /qs@6.11.0:
     resolution: {integrity: sha512-MvjoMCJwEarSbUYk5O+nmoSzSutSsTwF85zcHPQ9OrlFoZOYIjaqBAJIqIXjptyD5vThxGq52Xu/MaJzRkIk4Q==}
     engines: {node: '>=0.6'}
@@ -12231,10 +12245,32 @@ packages:
       - supports-color
     dev: true
 
+  /vite-plugin-qrcode@0.2.3(vite@5.0.5):
+    resolution: {integrity: sha512-TFzhf20v29hnh2XEoZ2kxg8Ff/ui36pR7PGDaHaKEmsQaRagv31XacHxbw5O07HcC1Mkr4tKcYb+PFASSceHmw==}
+    engines: {node: ^14.13.1 || ^16.0.0 || >=18}
+    peerDependencies:
+      vite: ^3.0.0 || ^4.0.0 || ^5.0.0
+    dependencies:
+      qrcode-terminal: 0.12.0
+      vite: 5.0.5(@types/node@20.10.3)
+    dev: true
+
   /vite-plugin-radar@0.9.2(vite@5.0.5):
     resolution: {integrity: sha512-cIwA7EU/6kqIPjSAFIjpnleJBtDVxw0lBwMyWIp8kit/O3XehHly+B6jCN7FbfQjniRxEtBarEzrLB+FmKSnAg==}
     peerDependencies:
       vite: ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
+    dependencies:
+      vite: 5.0.5(@types/node@20.10.3)
+    dev: true
+
+  /vite-plugin-remove-console@2.2.0:
+    resolution: {integrity: sha512-qgjh5pz75MdE9Kzs8J0kBwaCfifHV0ezRbB9rpGsIOxam+ilcGV7WOk91vFJXquzRmiKrFh3Hxlh0JJWAmXTbQ==}
+    dev: true
+
+  /vite-plugin-tips@2.1.2(vite@5.0.5):
+    resolution: {integrity: sha512-JhSUP1f09bPrUyKa4/q2vUGhcOkmdQETsFy95uXqKhfmaDsVuEn6K/YZxQ53KSI1XT6q+7Rq/jMrbIiMT2AHqw==}
+    peerDependencies:
+      vite: ^2.6.14
     dependencies:
       vite: 5.0.5(@types/node@20.10.3)
     dev: true
