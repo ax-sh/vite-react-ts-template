@@ -1,3 +1,4 @@
+import TurboConsole from 'unplugin-turbo-console/vite'
 import { defineConfig } from 'vite'
 import banner from 'vite-plugin-banner'
 import Pages from 'vite-plugin-pages'
@@ -9,6 +10,9 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [
+		TurboConsole({
+			/* options here */
+		}),
 		VitePluginRadar({
 			// Google Analytics tag injection
 			analytics: {
