@@ -172,6 +172,9 @@ devDependencies:
   vite-plugin-pwa:
     specifier: ^0.17.3
     version: 0.17.3(vite@5.0.5)
+  vite-plugin-radar:
+    specifier: ^0.9.2
+    version: 0.9.2(vite@5.0.5)
   vitest:
     specifier: ^1.0.1
     version: 1.0.1(@types/node@20.10.3)(@vitest/ui@1.0.1)(happy-dom@12.10.3)
@@ -12104,6 +12107,14 @@ packages:
     transitivePeerDependencies:
       - '@types/babel__core'
       - supports-color
+    dev: true
+
+  /vite-plugin-radar@0.9.2(vite@5.0.5):
+    resolution: {integrity: sha512-cIwA7EU/6kqIPjSAFIjpnleJBtDVxw0lBwMyWIp8kit/O3XehHly+B6jCN7FbfQjniRxEtBarEzrLB+FmKSnAg==}
+    peerDependencies:
+      vite: ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
+    dependencies:
+      vite: 5.0.5(@types/node@20.10.3)
     dev: true
 
   /vite@5.0.5(@types/node@20.10.3):
