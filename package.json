@@ -77,6 +77,7 @@
     "tailwindcss": "^3.3.6",
     "typescript": "^5.2.2",
     "vite": "^5.0.5",
+    "vite-plugin-banner": "^0.7.1",
     "vite-plugin-pages": "^0.32.0",
     "vite-plugin-pwa": "^0.17.3",
     "vitest": "^1.0.1"
