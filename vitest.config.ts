@@ -6,7 +6,8 @@ export default defineConfig({
 	plugins: [react()],
 	test: {
 		globals: true,
-		environment: 'happy-dom',
+		environment: 'jsdom',
+		// environment: 'happy-dom', // TEMP disable for now because of type error
 		setupFiles: './src/configs/setup-test.ts'
 	}
 })
