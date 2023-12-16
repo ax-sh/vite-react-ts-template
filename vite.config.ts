@@ -13,7 +13,7 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [
-		// qrcode(), // only applies in dev mode
+		qrcode(), // only applies in dev mode
 		// ViteTips(),
 		TurboConsole({
 			/* options here */
