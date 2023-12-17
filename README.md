@@ -50,6 +50,10 @@ pnpx msw init public
 ```
 
 ```shell
+# https://github.com/fi3ework/vite-plugin-checker?tab=readme-ov-file
+```
+
+```shell
 todo
 npx degit ax-sh/project#main my-project
 ```
