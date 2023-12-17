@@ -82,6 +82,7 @@
     "unplugin-turbo-console": "^1.0.8",
     "vite": "^5.0.10",
     "vite-plugin-banner": "^0.7.1",
+    "vite-plugin-checker": "^0.6.2",
     "vite-plugin-pages": "^0.32.0",
     "vite-plugin-pwa": "^0.17.4",
     "vite-plugin-qrcode": "^0.2.3",
