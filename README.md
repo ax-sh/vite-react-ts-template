@@ -1,5 +1,12 @@
 [![App CI](https://github.com/ax-sh/vite-react-ts-template/actions/workflows/ci.yml/badge.svg)](https://github.com/ax-sh/vite-react-ts-template/actions/workflows/ci.yml)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+
+# Run for using this
+
+```shell
+pnpx degit ax-sh/vite-react-ts-template#develop my-react-vite-project
+```
+
 ```shell
 pnpm create vite
 ```
@@ -51,9 +58,4 @@ pnpx msw init public
 
 ```shell
 # https://github.com/fi3ework/vite-plugin-checker?tab=readme-ov-file
-```
-
-```shell
-todo
-npx degit ax-sh/project#main my-project
 ```
